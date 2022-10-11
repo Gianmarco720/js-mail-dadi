@@ -7,15 +7,17 @@ const userMail = prompt('Inserisci la tua e-mail:');
 const mailList = ['orabonagianmarco379@gmail.com', 'paolo.bonolis@gmail.com', 'mariorossi@gmail.com', 'luca@gmail.com', 'marcolorem@gmail.com'];
 
 // controlla che sia nella lista di chi può accedere
+let checker = false;
 for (let i = 0; i < mailList.length; i++) {
-    const checkList = mailList[i];
-
-    if (userMail == checkList) {
-        alert('Accesso consentito');
-        break
-    } else {
-        alert('Non sei nella lista');
-        break
+    const thisMail = mailList[i];
+    if (userMail === thisMail) {
+        checker = true;
     }
+}
+
+if (checker) {
+    document.getElementById('valid_mail').innerHTML = 'Mail corretta, accesso consentito';
+} else {
+    document.getElementById('invalid_mail').innerHTML = 'Mail sbagliata, accesso negato';
 }
 // stampa un messaggio appropriato sull’esito del controllo.

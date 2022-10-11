@@ -1,0 +1,13 @@
+.container {
+    height: 500px;
+}
+
+#valid_mail {
+    color: green;
+    font-weight: bold;
+}
+
+#invalid_mail {
+    color: red;
+    font-weight: bold;
+}
